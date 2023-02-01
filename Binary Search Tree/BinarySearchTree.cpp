@@ -32,6 +32,7 @@
 		else
 			t=t->rchild;
 	 }
+	 
 	 p=(struct Node*)malloc(sizeof(struct Node));
 	 p->data=key;
 	 p->lchild=p->rchild=NULL;
@@ -149,14 +150,23 @@
  {
  	struct Node *temp;
  	
- 	root=RInsert(root,10);
- 	RInsert(root,5);
- 	RInsert(root,20);
- 	RInsert(root,8);
- 	RInsert(root,30);
- 	
- 	Delete(root,20);
- 	
+// 	root=RInsert(root,10);
+// 	RInsert(root,5);
+// 	RInsert(root,20);
+// 	RInsert(root,8);
+// 	RInsert(root,30);
+// 	
+// 	Delete(root,20);
+	int n;	
+ 	printf("Enter  the no. of nodes\n");
+ 	scanf("%d",&n);
+ 	while(n--)
+ 	{
+ 		int val;
+ 		printf("Enter  the value\n");
+ 		scanf("%d",&val);
+ 		insert(val);
+	}
  	Inorder(root);
  	printf("\n");
  	
